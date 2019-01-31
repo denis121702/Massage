@@ -1,0 +1,150 @@
+2015-03-27 18:05:10,491 - Startup
+2015-03-27 18:05:10,506 - Register
+2015-03-27 18:05:32,293 - Message: The transport failed to connect to the server.
+, Source: System.Web, InnerException: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Runtime.InteropServices.COMException: The transport failed to connect to the server.
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.InvokeDispMethod(String name, BindingFlags invokeAttr, Object target, Object[] args, Boolean[] byrefModifiers, Int32 culture, String[] namedParameters)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Web.Mail.SmtpMail.LateBoundAccessHelper.CallMethod(Object obj, String methodName, Object[] args) 
+2015-03-27 18:09:33,381 - Startup
+2015-03-27 18:09:33,393 - Register
+2015-03-27 18:49:15,151 - Startup
+2015-03-27 18:49:15,165 - Register
+2015-03-27 18:52:07,002 - Startup
+2015-03-27 18:52:07,015 - Register
+2015-03-27 18:52:38,671 - Startup
+2015-03-27 18:52:38,688 - Register
+2015-03-31 18:28:48,183 - Startup
+2015-03-31 18:28:48,366 - Register
+2015-03-31 18:29:44,402 - Startup
+2015-03-31 18:29:44,419 - Register
+2015-03-31 18:38:12,597 - Startup
+2015-03-31 18:38:12,611 - Register
+2015-03-31 19:11:01,450 - Startup
+2015-03-31 19:11:01,464 - Register
+2015-03-31 19:13:11,243 - Startup
+2015-03-31 19:13:11,257 - Register
+2015-03-31 19:13:21,152 - Message: Error writing MIME multipart body part to output stream., Source: System.Net.Http.Formatting, InnerException: System.InvalidOperationException: The stream provider of type 'CustomMultipartFormDataStreamProvider' threw an exception. ---> System.UnauthorizedAccessException: Access to the path 'i:\Programming2\Massage\massage-lounge-duesseldorf.de_25\WebApplication3\WebApplication3\FileUploads' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.Create(String path, Int32 bufferSize, FileOptions options)
+   at System.Net.Http.MultipartFileStreamProvider.GetStream(HttpContent parent, HttpContentHeaders headers)
+   at System.Net.Http.MultipartFormDataStreamProvider.GetStream(HttpContent parent, HttpContentHeaders headers)
+   at System.Net.Http.MimeBodyPart.GetOutputStream()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.MimeBodyPart.GetOutputStream()
+   at System.Net.Http.MimeBodyPart.<WriteSegment>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at System.Net.Http.HttpContentMultipartExtensions.<MultipartReadAsync>d__8.MoveNext() 
+2015-03-31 19:14:48,734 - Startup
+2015-03-31 19:14:48,751 - Register
+2015-03-31 19:17:23,831 - Startup
+2015-03-31 19:17:23,847 - Register
+2015-04-10 16:07:47,967 - Startup
+2015-04-10 16:07:47,981 - Register
+2015-04-10 16:09:42,552 - Message: Failure sending mail., Source: System, InnerException: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 68.178.232.62:25
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message) 
+2015-04-10 16:12:00,446 - Startup
+2015-04-10 16:12:00,459 - Register
+2015-04-10 16:19:42,329 - Startup
+2015-04-10 16:19:42,342 - Register
+2015-04-10 16:20:18,943 - Startup
+2015-04-10 16:20:18,956 - Register
+2015-04-10 16:20:59,161 - Message: Failure sending mail., Source: System, InnerException: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 68.178.232.62:25
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message) 
+2015-04-10 16:21:13,659 - Startup
+2015-04-10 16:21:13,686 - Register
+2015-04-10 16:57:31,893 - Startup
+2015-04-10 16:57:31,913 - Register
+2015-04-10 16:57:54,331 - GlobalExceptionHandler, Method: POST, RequestUri: http://localhost:51010/api/upload/onlinebooking, Message: Multiple actions were found that match the request: 
+OnlineBooking on type WebApplication3.Controllers.UploadController
+PostData on type WebApplication3.Controllers.UploadController 
+2015-04-10 16:58:14,727 - GlobalExceptionHandler, Method: POST, RequestUri: http://localhost:51010/api/upload/onlinebooking, Message: Multiple actions were found that match the request: 
+OnlineBooking on type WebApplication3.Controllers.UploadController
+PostData on type WebApplication3.Controllers.UploadController 
+2015-04-10 17:01:55,301 - Startup
+2015-04-10 17:01:55,314 - Register
+2015-04-10 17:02:02,437 - GlobalExceptionHandler, Method: POST, RequestUri: http://localhost:51010/api/upload/postdata, Message: Multiple actions were found that match the request: 
+OnlineBooking on type WebApplication3.Controllers.UploadController
+PostData on type WebApplication3.Controllers.UploadController 
+2015-04-10 17:04:31,535 - Startup
+2015-04-10 17:04:31,549 - Register
+2015-04-10 17:05:14,488 - Startup
+2015-04-10 17:05:14,501 - Register
+2015-04-10 17:05:42,765 - Startup
+2015-04-10 17:05:42,778 - Register
+2015-04-10 17:06:10,166 - Startup
+2015-04-10 17:06:10,180 - Register
+2015-04-10 17:07:05,269 - Startup
+2015-04-10 17:07:05,282 - Register
+2015-04-10 17:10:25,611 - Startup
+2015-04-10 17:10:25,634 - Register
+2015-04-10 17:12:50,659 - Startup
+2015-04-10 17:12:50,672 - Register
+2015-04-13 00:43:04,808 - Startup
+2015-04-13 00:43:04,856 - Register
+2015-04-13 15:07:39,655 - Startup
+2015-04-13 15:07:39,676 - Register
+2015-04-15 13:27:43,330 - Startup
+2015-04-15 13:27:43,346 - Register
+2015-04-15 13:38:26,076 - Startup
+2015-04-15 13:38:26,089 - Register
+2015-04-15 15:26:37,858 - Startup
+2015-04-15 15:26:37,871 - Register
+2015-04-19 12:32:33,295 - Startup
+2015-04-19 12:32:33,427 - Register
+2015-04-19 12:44:26,122 - Startup
+2015-04-19 12:44:26,135 - Register
+2015-04-27 16:24:28,384 - Startup
+2015-04-27 16:24:28,428 - Register
+2015-04-27 17:25:05,416 - Startup
+2015-04-27 17:25:05,429 - Register
+2015-04-29 11:13:50,029 - Startup
+2015-04-29 11:13:50,043 - Register
+2015-04-29 11:25:23,390 - Startup
+2015-04-29 11:25:23,404 - Register
+2015-04-29 11:26:22,385 - Startup
+2015-04-29 11:26:22,394 - Register
+2015-05-08 15:50:51,690 - Startup
+2015-05-08 15:50:51,741 - Register
+2015-05-08 15:52:13,610 - Startup
+2015-05-08 15:52:13,624 - Register
+2015-05-08 15:52:16,358 - Startup
+2015-05-08 15:52:16,371 - Register
+2015-08-05 09:58:45,934 - Startup
+2015-08-05 09:58:45,951 - Register
+2015-08-10 23:13:45,525 - Startup
+2015-08-10 23:13:45,623 - Register
+2015-08-10 23:17:12,883 - Startup
+2015-08-10 23:17:12,897 - Register
+2015-08-22 09:18:33,804 - Startup
+2015-08-22 09:18:33,970 - Register
+2015-08-22 09:55:12,517 - Startup
+2015-08-22 09:55:12,530 - Register
+2015-11-24 11:48:42,200 - Startup
+2015-11-24 11:48:42,228 - Register

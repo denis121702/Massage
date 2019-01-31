@@ -1,0 +1,87 @@
+<!--http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/#-->
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp" data-ng-controller="HomeController">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <link rel="stylesheet" href="http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/css/bootstrap.min.css">    
+	<link rel="stylesheet" href="http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css">    
+	<style>
+	.sidebar-nav-hover {
+		text-decoration: none;
+		color: #fff;
+		background: rgba(255,255,255,0.2);
+		border-left: red 2px solid;
+	}
+	</style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                 <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>				
+				<li ng-repeat="item in items"
+					ng-class="{ 'sidebar-nav-hover' : isActive(item) }">
+					<a href="#{{item.path}}">{{item.title}}</a>
+				</li>				
+                <!-- <li>
+                    <a href="#/posts">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#/about">Shortcuts</a>
+                </li>   -->             
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid" data-ng-view="">                
+				<!-- <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>		
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->   
+	
+	<!-- jquery/angular -->	
+	<script src="cms/js/jquery-1.11.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+
+	<!-- app javascript -->
+	<script src="cms/js/app.js"></script>
+	<!-- Load services -->	
+	<script src="cms/js/textService.js"></script>
+	<script src="cms/js/filesUploadService.js"></script>
+	<!-- Load controllers -->
+	<script src="cms/js/controllers.js"></script>
+
+</body>
+
+</html>

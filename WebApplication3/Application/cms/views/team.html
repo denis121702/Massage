@@ -1,0 +1,47 @@
+
+<div class="row">
+    <h2>{{header}}</h2>
+	<a class="btn btn-default" ng-click="addItem()"> + Add new item</a>
+    <a class="btn btn-default btn-danger" ng-click="save()"> Save </a>
+	<hr/>
+	<div class="row">
+		<ul class="media-list">
+			<li class="media" data-ng-repeat="item in texts | orderBy: 'id'">			
+				<div class="pull-left">
+					<label>{{$index + 1}}</label>
+				</div>
+				<div class="pull-right">								 				
+					<input type="checkbox" ng-model="item.disabled"> Disabled?				
+					<hr/>				
+					<a class="btn btn-default" ng-click="deleteItem($index)"> Delete </a>				
+				</div>
+				<div class="media-body">                
+					<textarea class="form-control"
+							  ng-disabled="item.disabled"
+							  rows="4"
+							  placeholder="Beschreibung"
+							  ng-model="item.text"></textarea>
+				</div>			
+			</li>
+		</ul>
+	</div>		
+	<br/>
+	<h2>Team photos</h2>
+	<a href="#/girl" class="btn btn-default"> + Add new girl</a>
+	<hr/>	
+    <ul class="media-list">
+        <li class="media" data-ng-repeat="post in teams | orderBy: 'id'">			
+			<a class="pull-left">				
+				<img class="media-object" height="110" ng-src="{{fullPathImage(post.Image)}}">				
+			</a>	
+			<div class="pull-right">								 
+				<a href="#/girl/{{post.Id}}" class="btn btn-default"> Edit </a>
+				<a class="btn btn-default" ng-click="deleteGirl($index, post.Id)"> Delete </a>				
+			</div>			
+            <div class="media-body">
+                <h4 class="media-heading">{{post.Girl}}</h4>
+                <p><small>ID: </small>{{post.Id}}</p>
+            </div>			
+        </li>
+    </ul>
+</div>

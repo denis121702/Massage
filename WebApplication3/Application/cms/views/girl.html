@@ -1,0 +1,52 @@
+
+<div class="row">
+    <h2>Girl : {{name}}</h2>
+    <h5><small>ID: </small> {{id}} </h5>
+    <a class="btn btn-default" ng-click="addItem()"> + Add new item</a>
+    <a class="btn btn-default btn-danger" ng-click="save()"> Save </a>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Girl name</h4>
+            <input class="form-control" name="name" ng-model="name" placeholder="Name" type="text">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <ul class="media-list">
+            <li class="media" data-ng-repeat="color in girlTexts | orderBy: 'id'">
+                <div class="pull-left">
+                    <label>{{$index + 1}}</label>
+                </div>
+                <div class="pull-right">
+                    <input type="checkbox" ng-model="color.disabled"> Disabled?
+                    <hr />
+                    <a class="btn btn-default" ng-click="deleteItem($index)"> Delete </a>
+                </div>
+                <div class="media-body">
+                    <textarea class="form-control"
+                              ng-disabled="color.disabled"
+                              rows="4"
+                              placeholder="Beschreibung"
+                              ng-model="color.text"></textarea>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <h2>Add Girl photos</h2>
+    <a class="btn btn-default" ng-click="uploadPhoto()"> + Upload photo </a>
+    <a class="btn btn-default btn-danger" ng-click="updatePhotos()"> Save </a>
+    <hr />
+    <div class="row">
+        <div class="col-xs-3" ng-repeat="photo in photos">
+            <img ng-src="{{fullPathImage(photo.Image)}}" height="100" class="img-responsive thumbnail">
+            <div class="col-xs-6">
+                <a class="btn btn-default" ng-click="deletePhoto($index, photo.Image)"> Delete </a>
+            </div>
+            <div class="col-xs-6">
+                <input type="checkbox" ng-model="photo.IsMain"> Main?
+            </div>
+        </div>
+    </div>
+</div>

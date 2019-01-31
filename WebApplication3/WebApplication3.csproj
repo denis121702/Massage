@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBCF3285-929B-4A11-9705-25FFB807D34E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication3</RootNamespace>
+    <AssemblyName>WebApplication3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application\404.html" />
+    <Content Include="Application\404.min.html">
+      <DependentUpon>404.html</DependentUpon>
+    </Content>
+    <Content Include="Application\ambiente.html" />
+    <Content Include="Application\cms.html" />
+    <Content Include="Application\cms\js\angular.min.js" />
+    <Content Include="Application\cms\js\app.js" />
+    <Content Include="Application\cms\js\bootstrap-combined.min.css" />
+    <Content Include="Application\cms\js\controllers.js" />
+    <Content Include="Application\cms\js\filesUploadService.js" />
+    <Content Include="Application\cms\js\jquery-1.11.3.min.js" />
+    <Content Include="Application\cms\js\jquery-2.0.0.min.js" />
+    <Content Include="Application\cms\js\textService.js" />
+    <Content Include="Application\cms\views\girl.html" />
+    <Content Include="Application\cms\views\home.html" />
+    <Content Include="Application\cms\views\team.html" />
+    <Content Include="Application\cms\views\text.html" />
+    <Content Include="Application\css\arrowL.png" />
+    <Content Include="Application\css\arrowR.png" />
+    <Content Include="Application\css\blog.png" />
+    <Content Include="Application\css\btn_bg.png" />
+    <Content Include="Application\css\call.png" />
+    <Content Include="Application\css\content_bg.png" />
+    <Content Include="Application\css\decor.png" />
+    <Content Include="Application\css\deutsche-flagge.png" />
+    <Content Include="Application\css\dropkick.css" />
+    <Content Include="Application\css\dropkick.min.css">
+      <DependentUpon>dropkick.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\englische_flagge.png" />
+    <Content Include="Application\css\facebook.png" />
+    <Content Include="Application\css\floatcon.htm" />
+    <Content Include="Application\css\floatcon.min.htm">
+      <DependentUpon>floatcon.htm</DependentUpon>
+    </Content>
+    <Content Include="Application\css\germanicon.jpg" />
+    <Content Include="Application\css\google.png" />
+    <Content Include="Application\css\grid.css" />
+    <Content Include="Application\css\grid.min.css">
+      <DependentUpon>grid.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\hline1.png" />
+    <Content Include="Application\css\hline2.png" />
+    <Content Include="Application\css\jquery-css-transform.js" />
+    <Content Include="Application\css\jquery-css-transform.min.js">
+      <DependentUpon>jquery-css-transform.js</DependentUpon>
+    </Content>
+    <Content Include="Application\css\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Application\css\jquery-ui-1.9.2.custom.min.css">
+      <DependentUpon>jquery-ui-1.9.2.custom.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\jquery.fancybox-1.3.4.css" />
+    <Content Include="Application\css\jquery.fancybox-1.3.4.min.css">
+      <DependentUpon>jquery.fancybox-1.3.4.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\links.png" />
+    <Content Include="Application\css\loading.gif" />
+    <Content Include="Application\css\logo_glow.png" />
+    <Content Include="Application\css\menu_bg.png" />
+    <Content Include="Application\css\more_bg.jpg" />
+    <Content Include="Application\css\panel_bg.png" />
+    <Content Include="Application\css\pause_icon.png" />
+    <Content Include="Application\css\reset.css" />
+    <Content Include="Application\css\reset.min.css">
+      <DependentUpon>reset.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\style.css" />
+    <Content Include="Application\css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\style2.css" />
+    <Content Include="Application\css\style2.min.css">
+      <DependentUpon>style2.css</DependentUpon>
+    </Content>
+    <Content Include="Application\css\telephone.gif" />
+    <Content Include="Application\css\twitter.png" />
+    <Content Include="Application\css\ui-icons_ffffff_256x240.png" />
+    <Content Include="Application\favicon.ico" />
+    <Content Include="Application\frauen_paare.html" />
+    <Content Include="Application\image\alex1.jpg" />
+    <Content Include="Application\image\alex2.jpg" />
+    <Content Include="Application\image\alex3.jpg" />
+    <Content Include="Application\image\alex4.jpg" />
+    <Content Include="Application\image\alicia1.jpg" />
+    <Content Include="Application\image\alicia2.jpg" />
+    <Content Include="Application\image\alicia3.jpg" />
+    <Content Include="Application\image\alicia4.jpg" />
+    <Content Include="Application\image\ambiente1.jpg" />
+    <Content Include="Application\image\ambiente2.jpg" />
+    <Content Include="Application\image\ambiente3.jpg" />
+    <Content Include="Application\image\ambiente4.jpg" />
+    <Content Include="Application\image\ambiente5.jpg" />
+    <Content Include="Application\image\amina1.jpg" />
+    <Content Include="Application\image\amina2.jpg" />
+    <Content Include="Application\image\amina3.jpg" />
+    <Content Include="Application\image\amina4.jpg" />
+    <Content Include="Application\image\angie1.jpg" />
+    <Content Include="Application\image\angie2.jpg" />
+    <Content Include="Application\image\angie3.jpg" />
+    <Content Include="Application\image\angie5.jpg" />
+    <Content Include="Application\image\discount.png" />
+    <Content Include="Application\image\home1.jpg" />
+    <Content Include="Application\image\home2.jpg" />
+    <Content Include="Application\image\home3.jpg" />
+    <Content Include="Application\image\home4.jpg" />
+    <Content Include="Application\image\home5.jpg" />
+    <Content Include="Application\image\home6.jpg" />
+    <Content Include="Application\image\home7.jpg" />
+    <Content Include="Application\image\home8.jpg" />
+    <Content Include="Application\image\jobs.jpg" />
+    <Content Include="Application\image\julia.jpg" />
+    <Content Include="Application\image\julia11.jpg" />
+    <Content Include="Application\image\julia12.jpg" />
+    <Content Include="Application\image\julia13.jpg" />
+    <Content Include="Application\image\julia14.jpg" />
+    <Content Include="Application\image\julia15.jpg" />
+    <Content Include="Application\image\julia16.jpg" />
+    <Content Include="Application\image\kery1.JPG" />
+    <Content Include="Application\image\kery2.jpg" />
+    <Content Include="Application\image\kery3.jpg" />
+    <Content Include="Application\image\kery4.jpg" />
+    <Content Include="Application\image\lara1.jpg" />
+    <Content Include="Application\image\lara2.jpg" />
+    <Content Include="Application\image\lara3.jpg" />
+    <Content Include="Application\image\lara4.jpg" />
+    <Content Include="Application\image\lara5.jpg" />
+    <Content Include="Application\image\lara6.jpg" />
+    <Content Include="Application\image\liana1.jpg" />
+    <Content Include="Application\image\liana2.jpg" />
+    <Content Include="Application\image\liana3.jpg" />
+    <Content Include="Application\image\lianу1.jpg" />
+    <Content Include="Application\image\lianу2.jpg" />
+    <Content Include="Application\image\lianу3.jpg" />
+    <Content Include="Application\image\lianу4.jpg" />
+    <Content Include="Application\image\lin1.jpg" />
+    <Content Include="Application\image\lin2.jpg" />
+    <Content Include="Application\image\lin3.jpg" />
+    <Content Include="Application\image\lisa1.jpg" />
+    <Content Include="Application\image\lisa2.jpg" />
+    <Content Include="Application\image\lisa3.jpg" />
+    <Content Include="Application\image\lisa5.jpg" />
+    <Content Include="Application\image\lisa6.jpg" />
+    <Content Include="Application\image\logo2.png" />
+    <Content Include="Application\image\logo3.png" />
+    <Content Include="Application\image\massage.jpg" />
+    <Content Include="Application\image\menu_bg.png" />
+    <Content Include="Application\image\natja1.jpg" />
+    <Content Include="Application\image\natja2.jpg" />
+    <Content Include="Application\image\natja3.jpg" />
+    <Content Include="Application\image\natja4.jpg" />
+    <Content Include="Application\image\natja5.jpg" />
+    <Content Include="Application\image\natja6.jpg" />
+    <Content Include="Application\image\natja7.jpg" />
+    <Content Include="Application\image\nicole1.jpg" />
+    <Content Include="Application\image\paare.jpg" />
+    <Content Include="Application\image\philosophie.jpg" />
+    <Content Include="Application\image\prev-horizontal.png" />
+    <Content Include="Application\image\sarah1.jpg" />
+    <Content Include="Application\image\sarah2.jpg" />
+    <Content Include="Application\image\sarah3.jpg" />
+    <Content Include="Application\image\sarah4.jpg" />
+    <Content Include="Application\image\sarah5.jpg" />
+    <Content Include="Application\image\sarah6.jpg" />
+    <Content Include="Application\image\sylvia1.jpg" />
+    <Content Include="Application\image\sylvia2.jpg" />
+    <Content Include="Application\image\sylvia3.jpg" />
+    <Content Include="Application\image\tanja1.jpg" />
+    <Content Include="Application\image\tanja2.jpg" />
+    <Content Include="Application\image\tanja3.jpg" />
+    <Content Include="Application\image\tanja4.jpg" />
+    <Content Include="Application\image\tanja5.jpg" />
+    <Content Include="Application\image\tantra.jpg" />
+    <Content Include="Application\image\thalia1.jpg" />
+    <Content Include="Application\image\thalia2.jpg" />
+    <Content Include="Application\image\thalia3.jpg" />
+    <Content Include="Application\image\thalia4.jpg" />
+    <Content Include="Application\image\welcome_to_spicy.jpg" />
+    <Content Include="Application\image\yasmina1.jpg" />
+    <Content Include="Application\impressum.html" />
+    <Content Include="Application\index.html" />
+    <Content Include="Application\job.html" />
+    <Content Include="Application\js\bgStretch.js" />
+    <Content Include="Application\js\bgStretch.min.js">
+      <DependentUpon>bgStretch.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\googleMap.js" />
+    <Content Include="Application\js\googleMap.min.js">
+      <DependentUpon>googleMap.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery-1.7.2.min.js" />
+    <Content Include="Application\js\jquery-ui-1.9.2.custom.js" />
+    <Content Include="Application\js\jquery-ui-1.9.2.custom.min.js">
+      <DependentUpon>jquery-ui-1.9.2.custom.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.background.image.scale-0.1.js" />
+    <Content Include="Application\js\jquery.background.image.scale-0.1.min.js">
+      <DependentUpon>jquery.background.image.scale-0.1.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.backgroundpos.js" />
+    <Content Include="Application\js\jquery.backgroundpos.min.js">
+      <DependentUpon>jquery.backgroundpos.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.color.js" />
+    <Content Include="Application\js\jquery.color.min.js">
+      <DependentUpon>jquery.color.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.dropkick-1.0.0.js" />
+    <Content Include="Application\js\jquery.dropkick-1.0.0.min.js">
+      <DependentUpon>jquery.dropkick-1.0.0.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.easing.js" />
+    <Content Include="Application\js\jquery.easing.min.js">
+      <DependentUpon>jquery.easing.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Application\js\jquery.fancybox-1.3.4.pack.min.js">
+      <DependentUpon>jquery.fancybox-1.3.4.pack.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\scripts.js" />
+    <Content Include="Application\js\scripts.min.js">
+      <DependentUpon>scripts.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\sImg.js" />
+    <Content Include="Application\js\sImg.min.js">
+      <DependentUpon>sImg.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\superfish.js" />
+    <Content Include="Application\js\superfish.min.js">
+      <DependentUpon>superfish.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\switcher.js" />
+    <Content Include="Application\js\switcher.min.js">
+      <DependentUpon>switcher.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\uScroll.js" />
+    <Content Include="Application\js\uScroll.min.js">
+      <DependentUpon>uScroll.js</DependentUpon>
+    </Content>
+    <Content Include="Application\kontakt.html" />
+    <Content Include="Application\massagen.html" />
+    <Content Include="Application\onlinebookingsuccess.html" />
+    <Content Include="Application\online_booking.html" />
+    <Content Include="Application\philosophie.html" />
+    <Content Include="Application\regeln.html" />
+    <Content Include="Application\robots.txt" />
+    <Content Include="Application\sitemap.xml" />
+    <Content Include="Application\tantra.html" />
+    <Content Include="Application\team.html" />
+    <Content Include="Application\uploadsuccess.html" />
+    <Content Include="App_Data\TextFile1.txt" />
+    <Content Include="FileUploads\TemplateGirlPage.html" />
+    <Content Include="FileUploads\TextFile1.txt" />
+    <Content Include="Libs\log4net.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Contract\PhotoData.cs" />
+    <Compile Include="Contract\PhotoDataRequest.cs" />
+    <Compile Include="Contract\PhotoDataResponse.cs" />
+    <Compile Include="Contract\PhotoDataGirlName.cs" />
+    <Compile Include="Contract\RequestDeleteGirl.cs" />
+    <Compile Include="Contract\RequestSaveGirl.cs" />
+    <Compile Include="Contract\RequestSaveText.cs" />
+    <Compile Include="Contract\SaveGirlResponse.cs" />
+    <Compile Include="Contract\TextData.cs" />
+    <Compile Include="Contract\UpdatePhotosRequest.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FilesController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="ExceptionHandler\GlobalExceptionHandler.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Help\ImageTools.cs" />
+    <Compile Include="Models\EmailModel.cs" />
+    <Compile Include="Models\EmailService.cs" />
+    <Compile Include="Models\Helper.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Application\css\css" />
+    <Content Include="Application\css\jquery-css-transform.min.js.map">
+      <DependentUpon>jquery-css-transform.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\bgStretch.min.js.map">
+      <DependentUpon>bgStretch.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\googleMap.min.js.map">
+      <DependentUpon>googleMap.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery-ui-1.9.2.custom.min.js.map">
+      <DependentUpon>jquery-ui-1.9.2.custom.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.background.image.scale-0.1.min.js.map">
+      <DependentUpon>jquery.background.image.scale-0.1.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.backgroundpos.min.js.map">
+      <DependentUpon>jquery.backgroundpos.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.color.min.js.map">
+      <DependentUpon>jquery.color.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.dropkick-1.0.0.min.js.map">
+      <DependentUpon>jquery.dropkick-1.0.0.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.easing.min.js.map">
+      <DependentUpon>jquery.easing.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\jquery.fancybox-1.3.4.pack.min.js.map">
+      <DependentUpon>jquery.fancybox-1.3.4.pack.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\scripts.min.js.map">
+      <DependentUpon>scripts.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\sImg.min.js.map">
+      <DependentUpon>sImg.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\superfish.min.js.map">
+      <DependentUpon>superfish.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\switcher.min.js.map">
+      <DependentUpon>switcher.min.js</DependentUpon>
+    </Content>
+    <Content Include="Application\js\uScroll.min.js.map">
+      <DependentUpon>uScroll.min.js</DependentUpon>
+    </Content>
+    <Content Include="FileUploads\SaveText.json" />
+    <Content Include="Application\cms\js\100x100" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
+    <Content Include="Views\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51010</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51010/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
